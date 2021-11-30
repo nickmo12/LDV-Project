@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,13 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+#navbar{
+  background-color: #3AA2FB;
+  padding: 1rem;
+}
+#navbar a{
+  color: white;
+  text-decoration: none;
 }

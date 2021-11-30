@@ -4,7 +4,14 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <nav id="navbar">
+        <a href="#">LifeDataVault</a> | 
+        <a href="#">Data</a> | 
+        <a href="#">Plans</a> | 
+        <a href="#">Explore</a> | 
+        <a href="#">Contact</a>
+      </nav>
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +24,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
