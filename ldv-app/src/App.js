@@ -12,7 +12,7 @@ export default function App(){
     <Router>
       <nav id="navbar">
           <a>
-            <Link to="/ldv">LifeDataVault</Link>
+            <Link to="/">LifeDataVault</Link>
           </a>
           <a>
             <Link to="/data">Data</Link>
@@ -29,7 +29,7 @@ export default function App(){
       </nav>
 
       <Routes>
-        <Route exact path="/ldv" element={<Home/>} />
+        <Route exact path="/" element={<Home/>} />
         <Route exact path="/plans" element={<Plans/>} />
         <Route exact path="/explore" element={<Explore/>} />
         <Route exact path="/login" element={<Login/>} />
