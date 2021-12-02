@@ -1,12 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
-import {
+import React, { Component } from "react";import {
   BrowserRouter as Router,
   Routes,
   Route,
   Link
 } from "react-router-dom";
 
+class MyFunc extends Component{
+  constructor(props){
+    super(props);
+    this.Username = "this is a test";
+    this.password = "this is a password";
+  }
+  returnUsername = () => {
+    return {};
+  }
+  
+  changeUsername = (temp) => {
+    this.Username = temp;
+  }
+}
 export default function App(){
   return(
     <Router>
@@ -39,6 +53,7 @@ export default function App(){
 }
 
 function Home(){
+  console.log(MyFunc.testVariable);
   return(
   <div>
    <h2 class="centerme blue-text">Life Data Vault</h2>
@@ -46,7 +61,6 @@ function Home(){
    <Link to="/plans">
      <button>Get Started</button>
    </Link>
-   
    <Link to="/explore">
     <button>Learn More</button>
    </Link>
@@ -104,6 +118,10 @@ function Explore(){
 function Login(){
   return(
     <div>
+         <label for="username">Enter your Username:</label><br/>
+         <input type="text" id="username" name="uname"></input><br/><br/>
+         <label for="username">Enter your Password:</label><br/>
+         <input type="text" id="username" name="uname"></input><br/>
     </div>
   );
 }
