@@ -102,6 +102,51 @@ function Plans(){
   );
 }
 
+function Login(){
+  return(
+    <div>
+        {/* Inputs must always be:
+        F: John
+        L: Doe
+        U: JDoe1964
+        P: password */}
+         <label for="fname">Enter your first name:</label><br/>
+         <input type="text" id="fname" name="fnameinput"></input><br/><br/>
+         <label for="lname">Enter your last name:</label><br/>
+         <input type="text" id="lname" name="lnameinput"></input><br/><br/>
+         <label for="username">Enter your Username:</label><br/>
+         <input type="text" id="username" name="uname"></input><br/><br/>
+         <label for="passwordlabel">Enter your Password:</label><br/>
+         <input type="text" id="password" name="uname"></input><br/>
+        <Link to="/user-page">
+          <button>Sign Up</button>
+        </Link>
+    </div>
+  );
+}
+
+function UserPage(){
+  return(
+    <div>
+      <div id="userNBeneficiariesCol">
+        <p>John Doe</p>
+        <h6>@JDoe1964</h6>
+      </div>
+      <div id="uploadDatanRecentActivityCol">
+        <div id="">
+
+        </div>
+        <Link to="/uploadDigital">
+          <button> + Upload Digital</button>
+        </Link>
+        <Link to="/uploadPhysical">
+          <button> + Upload Physical Device</button>
+        </Link>
+      </div>
+    </div>
+  )
+}
+
 function Explore(){
   return(
     <div>
@@ -111,17 +156,6 @@ function Explore(){
       <p>
       There are many ways loved ones can request access to your accounts once you're gone, but they don't need that stress. Several online services allow you to designate legacy contacts or grant access after a period of inactivity. Here's how to make sure those you leave behind can manage your affairs after you head to the great beyond.
       </p>
-    </div>
-  );
-}
-
-function Login(){
-  return(
-    <div>
-         <label for="username">Enter your Username:</label><br/>
-         <input type="text" id="username" name="uname"></input><br/><br/>
-         <label for="username">Enter your Password:</label><br/>
-         <input type="text" id="username" name="uname"></input><br/>
     </div>
   );
 }
