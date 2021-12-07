@@ -1,12 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
-import {
+import React, { Component } from "react";import {
   BrowserRouter as Router,
   Routes,
   Route,
   Link
 } from "react-router-dom";
 
+class MyFunc extends Component{
+  constructor(props){
+    super(props);
+    this.Username = "this is a test";
+    this.password = "this is a password";
+  }
+  returnUsername = () => {
+    return {};
+  }
+  
+  changeUsername = (temp) => {
+    this.Username = temp;
+  }
+}
 export default function App(){
   return(
     <Router>
@@ -39,6 +53,7 @@ export default function App(){
 }
 
 function Home(){
+  console.log(MyFunc.testVariable);
   return(
     <div>
       <h2 class="centerme blue-text centerHomePageTitle">Life Data Vault</h2>
@@ -92,6 +107,51 @@ function Plans(){
   );
 }
 
+function Login(){
+  return(
+    <div>
+        {/* Inputs must always be:
+        F: John
+        L: Doe
+        U: JDoe1964
+        P: password */}
+         <label for="fname">Enter your first name:</label><br/>
+         <input type="text" id="fname" name="fnameinput"></input><br/><br/>
+         <label for="lname">Enter your last name:</label><br/>
+         <input type="text" id="lname" name="lnameinput"></input><br/><br/>
+         <label for="username">Enter your Username:</label><br/>
+         <input type="text" id="username" name="uname"></input><br/><br/>
+         <label for="passwordlabel">Enter your Password:</label><br/>
+         <input type="text" id="password" name="uname"></input><br/>
+        <Link to="/user-page">
+          <button>Sign Up</button>
+        </Link>
+    </div>
+  );
+}
+
+function UserPage(){
+  return(
+    <div>
+      <div id="userNBeneficiariesCol">
+        <p>John Doe</p>
+        <h6>@JDoe1964</h6>
+      </div>
+      <div id="uploadDatanRecentActivityCol">
+        <div id="">
+
+        </div>
+        <Link to="/uploadDigital">
+          <button> + Upload Digital</button>
+        </Link>
+        <Link to="/uploadPhysical">
+          <button> + Upload Physical Device</button>
+        </Link>
+      </div>
+    </div>
+  )
+}
+
 function Explore(){
   return(
     <div>
@@ -101,13 +161,6 @@ function Explore(){
       <p>
       There are many ways loved ones can request access to your accounts once you're gone, but they don't need that stress. Several online services allow you to designate legacy contacts or grant access after a period of inactivity. Here's how to make sure those you leave behind can manage your affairs after you head to the great beyond.
       </p>
-    </div>
-  );
-}
-
-function Login(){
-  return(
-    <div>
     </div>
   );
 }
