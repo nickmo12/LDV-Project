@@ -40,23 +40,27 @@ export default function App(){
 
 function Home(){
   return(
-  <div>
-   <h2 class="centerme blue-text">Life Data Vault</h2>
-   <p class="centerme grey-text">Leave your data for the ones you love the most</p>
-   <Link to="/plans">
-     <button>Get Started</button>
-   </Link>
-   
-   <Link to="/explore">
-    <button>Learn More</button>
-   </Link>
- </div>); 
+    <div>
+      <h2 class="centerme blue-text centerHomePageTitle">Life Data Vault</h2>
+      <p class="centerme grey-text titleSlogan">Leave your data for the ones you love the most</p>
+      
+      <div class="buttonContainer">
+        <Link to="/plans">
+          <button class="blueButton">Get Started</button>
+        </Link>
+        
+        <Link to="/explore">
+          <button class="learnMoreButton">Learn More</button>
+        </Link>
+      </div>
+    </div>
+ ); 
 }
 
 function Plans(){
   return(
     <div>
-      <h2 class="centerme">Our Main Pricing Option</h2>
+      <h2 class="centerme pageTitle">Our Main Pricing Option</h2>
       <div id="pricing-and-offer-div">
         {/* Left div */}
         <div id="plan-pricing-div">
@@ -78,10 +82,10 @@ function Plans(){
           </ul>
         </div>
       </div>      
-      <h2 class="centerme">Interested?</h2>
+      <h2 class="centerme" id="interestedText">Interested?</h2>
       <div class="centerme">
         <Link to="/login">
-          <button id="login-btn">Create an account today!</button>
+          <button id="login-btn" class="blueButton">Create an account today!</button>
         </Link>
       </div>
     </div>
