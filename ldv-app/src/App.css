@@ -47,3 +47,16 @@ button{
   border: 1px solid gray;
   padding: 2rem;
 }
+
+/* User Page */
+.profile-pic{
+  width: 30%;
+}
+
+.userprofile-div{
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+}

@@ -133,23 +133,32 @@ function Login(){
 function UserPage(){
   return(
     <div>
-      <div id="userNBeneficiariesCol">
-        <p>John Doe</p>
-        <h6>@JDoe1964</h6>
-      </div>
-      <div id="uploadDatanRecentActivityCol">
-        <div id="uploadBtns">
-          <Link to="/user-page/uploadDigital">
-            <button> + Upload Digital</button>
-          </Link>
-          <Link to="/user-page/uploadPhysical">
-            <button> + Upload Physical Device</button>
-          </Link>
+      <div class="userprofile-div">
+        <div id="userNBeneficiariesCol" class="centerme">
+          <div id="userDiv">
+            <img class="profile-pic" src="profilepic.png"></img>
+            <h3>John Doe</h3>
+            <h6>@JDoe1964</h6>
+          </div>
+          <div id="beneficiariesDiv">
+            <h4>Beneficiaries (0)</h4>
+          </div>
         </div>
-        <div id="recentActivity">
-
+        <div id="uploadDatanRecentActivityCol">
+          <div id="uploadBtns">
+            <Link to="/user-page/uploadDigital">
+              <button> + Upload Digital</button>
+            </Link>
+            <Link to="/user-page/uploadPhysical">
+              <button> + Upload Physical Device</button>
+            </Link>
+          </div>
+          <div id="recentActivity">
+            <h3 class="centerme">Recent Activity</h3>
+          </div>
         </div>
       </div>
+      
     </div>
   )
 }
