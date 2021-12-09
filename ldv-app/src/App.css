@@ -111,4 +111,16 @@ button{
 #interestedText {
   color: #505050;
   margin: 43px;
+
+/* User Page */
+.profile-pic{
+  width: 30%;
+}
+
+.userprofile-div{
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
 }

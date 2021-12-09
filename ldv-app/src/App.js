@@ -38,7 +38,10 @@ export default function App(){
             <Link to="/explore">Explore</Link>
           </a>
           <noscript>
-            <Link to="/login">Login</Link>
+            <Link to="/login"></Link>
+          </noscript>
+          <noscript>
+            <Link to="/user-page"></Link>
           </noscript>
       </nav>
 
@@ -47,6 +50,8 @@ export default function App(){
         <Route exact path="/plans" element={<Plans/>} />
         <Route exact path="/explore" element={<Explore/>} />
         <Route exact path="/login" element={<Login/>} />
+        <Route exact path="/user-page" element={<UserPage/>} />
+
       </Routes>
     </Router>
   );
@@ -122,7 +127,7 @@ function Login(){
          <label for="username">Enter your Username:</label><br/>
          <input type="text" id="username" name="uname"></input><br/><br/>
          <label for="passwordlabel">Enter your Password:</label><br/>
-         <input type="text" id="password" name="uname"></input><br/>
+         <input type="password" id="password" name="uname"></input><br/>
         <Link to="/user-page">
           <button>Sign Up</button>
         </Link>
@@ -133,21 +138,32 @@ function Login(){
 function UserPage(){
   return(
     <div>
-      <div id="userNBeneficiariesCol">
-        <p>John Doe</p>
-        <h6>@JDoe1964</h6>
-      </div>
-      <div id="uploadDatanRecentActivityCol">
-        <div id="">
-
+      <div class="userprofile-div">
+        <div id="userNBeneficiariesCol" class="centerme">
+          <div id="userDiv">
+            <img class="profile-pic" src="profilepic.png"></img>
+            <h3>John Doe</h3>
+            <h6>@JDoe1964</h6>
+          </div>
+          <div id="beneficiariesDiv">
+            <h4>Beneficiaries (0)</h4>
+          </div>
         </div>
-        <Link to="/uploadDigital">
-          <button> + Upload Digital</button>
-        </Link>
-        <Link to="/uploadPhysical">
-          <button> + Upload Physical Device</button>
-        </Link>
+        <div id="uploadDatanRecentActivityCol">
+          <div id="uploadBtns">
+            <Link to="/user-page/uploadDigital">
+              <button> + Upload Digital</button>
+            </Link>
+            <Link to="/user-page/uploadPhysical">
+              <button> + Upload Physical Device</button>
+            </Link>
+          </div>
+          <div id="recentActivity">
+            <h3 class="centerme">Recent Activity</h3>
+          </div>
+        </div>
       </div>
+      
     </div>
   )
 }
