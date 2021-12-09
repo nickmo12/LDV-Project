@@ -54,3 +54,21 @@ button{
   margin-right: auto;
   width: 50%;
 }
+
+.paragraphOne {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+.paragraphTwo {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+.credit{
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
