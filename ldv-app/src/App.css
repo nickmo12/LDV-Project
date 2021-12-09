@@ -40,13 +40,77 @@ button{
   background-color: white;
   border: 1px solid white;
   border-radius: 2px;
-  
+  color: #2699FB;;
 }
 
 #subscription-features-div{
-  border: 1px solid gray;
+  border: 2px solid #BCE0FD;
   padding: 2rem;
 }
+
+
+/* ----- Front Page ------ */
+.centerHomePageTitle {
+  color: #575DF4;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 65px;
+  margin-bottom: 0;
+}
+
+.titleSlogan {
+  color: #6669af;
+  font-family: 'Open Sans';
+  font-weight: 100;
+  font-size: 30px;
+}
+
+.blueButton {
+  background-color: #2699FB;
+  border: 1px solid #2699FB;
+  color: #FFF;
+  font-weight: bold;
+  border-radius: 3px;
+  margin-right: 26px;
+}
+
+.learnMoreButton {
+  background-color: transparent;
+  border: 3px solid #BCE0FD;
+  border-radius: 3px;
+  color: #2699FB;
+  font-weight: bold;
+}
+
+.buttonContainer {
+  width: 321px;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+}
+
+/* ----- Plans Page ------ */
+.pageTitle {
+  color: #575DF4;
+  font-size: 30px;
+  font-family: 'Open Sans';
+  margin: 40px 0px 73px 0px;
+}
+#subscription-features-div h2 {
+  font: 800 14px 'Open Sans';
+  color: #505050;
+  margin: 0;
+}
+
+#subscription-features-div ul li {
+  color: #2699FB;
+  margin: 25px 0;
+  font-family: 'Open Sans';
+}
+#interestedText {
+  color: #505050;
+  margin: 43px;
 
 /* User Page */
 .profile-pic{
