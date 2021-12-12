@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import React, { Component } from "react";import {
+import Photo from './LifeVaultCoverImage.jpeg';
+import React, { Component } from "react";
+import {
   BrowserRouter as Router,
   Routes,
   Route,
@@ -52,6 +54,9 @@ export default function App(){
         <Route exact path="/login" element={<Login/>} />
         <Route exact path="/user-page" element={<UserPage/>} />
         <Route exact path="/search-results/duncan-idaho" element={<DuncanIdahoPage/>} />
+        <Route exact path="/user-page/uploadDigital" element={<UploadDigital/>} />
+        <Route exact path="/user-page/uploadPhysical" element={<UploadPhysical/>} />
+
 
       </Routes>
     </Router>
@@ -221,12 +226,72 @@ function DuncanIdahoPage(){
 function Explore(){
   return(
     <div>
-      <p>
+      <img src={Photo} alt='Life Vault Cover Photo' class='ExploreImage'/>
+      <p class='paragraphOne'>
       Death is as somber as it is inevitable. But as we live more of our lives online, it's more important than ever to make sure loved ones can access digital accounts when we're gone. Don't be the guy who locked cryptocurrency exchange customers out of $250 million after his death because only he knew the password.
       </p>
-      <p>
+      <p class='paragraphTwo'>
       There are many ways loved ones can request access to your accounts once you're gone, but they don't need that stress. Several online services allow you to designate legacy contacts or grant access after a period of inactivity. Here's how to make sure those you leave behind can manage your affairs after you head to the great beyond.
       </p>
+      <p class='credit'>
+        LDV was a project developed by Andrew Ohakam, Alberto Garcia, Nicolas Medina, Ahsanul Haque, Imdad Ahmed and Joel Rosas.
+      </p>
+    </div>
+  );
+}
+
+function UploadPhysical(){
+  return(
+    <div>
+        <h2 class="centerme pageTitle">Register Physical Device</h2>
+        <div id="uploadPhysicalCol" class="centerme">
+            <label for="devicename">Device Name</label><br/>
+            <input type="text" id="devicename" name="devicenameinput" size="60" height="60px"placeholder="Official name of the device (ex: Samsung Galaxy S10, iPhone 8)"></input><br/><br/>
+            <label for="devicetype">Type of Device</label><br/>
+            <select name="devices" id="devices">
+                <option value="Computer">Computer</option>
+                <option value="Tablet">Tablet</option>
+                <option value="Phone">Phone</option>
+                <option value="Harddrive">Hard Drive</option>
+              </select><br/><br/>
+            <label for="password">Password (optional)</label><br/>
+            <input type="password" id="password" name="password" size="60" placeholder="If a password is needed to access the device, enter it here."></input><br/><br></br>
+            <label for="accountemail">Email connected to account</label><br/>
+            <input type="text" id="accountemail" name="accountemailinput" size="60" placeholder="What is your username for the above website?"></input><br/><br/>
+            <label for="peripherals">Required Peripherals</label><br/>
+            <input type="text" id="peripherals" name="peripheralinput" size="60" placeholder="Ex: chargers, power cords"></input><br/><br/>
+         </div>
+         <div id="submitCol">
+                  <Link to="/user-page">
+                    <button id="registerbutton">Submit</button>
+                  </Link>
+              </div>
+    </div>
+  );
+}
+
+function UploadDigital(){
+  return(
+    <div>
+        <h2 class="centerme pageTitle">Register/Update Website Info</h2>
+            <div id="uploadDigitalCol" class="centerme">
+                <label for="websitelink">Website Link</label><br/>
+                <input type="text" id="websitelink" name="websitelinkinput" size="60" placeholder="ex: facebook.com, twitter.com" required></input><br/><br/>
+                <label for="username">Username</label><br/>
+                <input type="text" id="username" name="usernameinput" size="60" placeholder="What is your username for the above website?" required></input><br/><br/>
+                <label for="password">Password</label><br/>
+                <input type="password" id="password" name="password" size="60" placeholder="What is your password for the above website?" required></input><br/><br></br>
+                <label for="accountemail">Email connected to account</label><br/>
+                <input type="text" id="accountemail" name="accountemailinput" size="60" placeholder="What email is connected to the above website?"></input><br/><br/>
+                <label for="securityquestions">Security Questions (optional)</label><br/>
+                <input type="text" id="securityquestions" name="securityquestioninput" placeholder="Security Question"></input>
+                <input type="text" id="securityanswer" name="securityanswerinput" placeholder="Your answer"></input><br/><br/>
+              </div>
+            <div id="submitCol">
+                  <Link to="/user-page">
+                    <button id="registerbutton">Submit</button>
+                  </Link>
+              </div>
     </div>
   );
 }

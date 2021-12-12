@@ -48,7 +48,30 @@ button{
   padding: 2rem;
 }
 
+.ExploreImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
+.paragraphOne {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+.paragraphTwo {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+.credit{
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
 /* ----- Front Page ------ */
 .centerHomePageTitle {
   color: #575DF4;
@@ -114,7 +137,6 @@ button{
   color: #505050;
   margin: 43px;
 }
-
 /* User Page */
 
 #userNBeneficiariesCol{
@@ -207,4 +229,46 @@ button{
 /* Change the background color of the dropdown button when the dropdown content is shown */
 #dropdown:hover #dropbtn {
   background-color: #2699FB;
+}
+/* Upload Digital */
+#uploadDigitalCol{
+  float:left;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding-left: 70px;
+  align-items: flex-start;
+  color: blue;
+  font-weight: bolder;
+  font-size: larger;
+  
+}
+
+#submitCol{
+  float: right;
+  display: flex;
+  justify-content: flex-start;
+  padding-right: 500px;
+}
+#registerbutton{
+  background-color: #8506f9;
+  color: #FFF;
+  font-weight: bold;
+  font-size: large;
+  border-radius: 10px;
+  width: 140px;
+  height: 50px;
+  position:relative;
+}
+
+/* Upload Physical */
+#uploadPhysicalCol{
+  float:left;
+  display:flex;
+  flex-direction: column;
+  padding-left: 70px;
+  align-items: flex-start;
+  color: blue;
+  font-weight: bolder;
+  font-size: larger;  
 }
