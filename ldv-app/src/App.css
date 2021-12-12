@@ -120,6 +120,7 @@ button{
   font-family: 'Open Sans';
   margin: 40px 0px 73px 0px;
 }
+
 #subscription-features-div h2 {
   font: 800 14px 'Open Sans';
   color: #505050;
@@ -131,16 +132,46 @@ button{
   margin: 25px 0;
   font-family: 'Open Sans';
 }
+
 #interestedText {
   color: #505050;
   margin: 43px;
 }
 /* User Page */
+
+#userNBeneficiariesCol{
+  position: relative;
+  right: 10vw;
+}
+
+#searchbar-div{
+  padding-top: 1rem;
+  padding-bottom: 0;
+}
+
+.searchbar {
+  padding: .75rem;
+  width: 50vw;
+}
+
+.search-btn {
+  margin-left: 1rem;
+  background-color: #8306F8;
+  color: white;
+  font-size: 0.8rem;
+  border: none;
+}
+
+.search-btn:hover {
+  background-color: gray;
+}
+
 .profile-pic{
   width: 30%;
 }
 
 .userprofile-div{
+  margin-top: 1rem;
   display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -148,6 +179,57 @@ button{
 	align-items: center;
 }
 
+/* Beneficiaries Dropdown */
+
+#dropbtn {
+  background-color: #2699FB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  min-width: 160px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+#dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+#dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  z-index: 1;
+  border: 1px solid gray;
+}
+
+/* Links inside the dropdown */
+#dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+#dropdown-content a:hover {
+  background-color: white;
+  border: 1px solid gray;
+}
+
+/* Show the dropdown menu on hover */
+#dropdown:hover #dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+#dropdown:hover #dropbtn {
+  background-color: #2699FB;
+}
 /* Upload Digital */
 #uploadDigitalCol{
   float:left;
@@ -188,6 +270,5 @@ button{
   align-items: flex-start;
   color: blue;
   font-weight: bolder;
-  font-size: larger;
-  
+  font-size: larger;  
 }

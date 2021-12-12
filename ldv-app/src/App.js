@@ -53,8 +53,10 @@ export default function App(){
         <Route exact path="/explore" element={<Explore/>} />
         <Route exact path="/login" element={<Login/>} />
         <Route exact path="/user-page" element={<UserPage/>} />
+        <Route exact path="/search-results/duncan-idaho" element={<DuncanIdahoPage/>} />
         <Route exact path="/user-page/uploadDigital" element={<UploadDigital/>} />
         <Route exact path="/user-page/uploadPhysical" element={<UploadPhysical/>} />
+
 
       </Routes>
     </Router>
@@ -142,6 +144,24 @@ function Login(){
 function UserPage(){
   return(
     <div>
+      <div id="searchbar-div" class="centerme">
+          <input class="searchbar" type="text" list="suggestions" placeholder="Search for beneficiaries"/>
+          <datalist id="suggestions">
+            <option>Duncan Idaho</option>
+            <option>John Roe</option>
+            <option>Randall Thor</option>
+            <option>Jonas Akembu</option>
+            <option>Miley Rothemby</option>
+            <option>Kou Uraki</option>
+            <option>Minerva Zabie</option>
+            <option>Christina Mackenzie</option>
+            <option>Leila Singh</option>
+            <option>Miranda Cruz</option>
+          </datalist>
+          <Link to="/search-results/duncan-idaho">
+            <button class="search-btn">Search</button>
+          </Link>
+      </div>
       <div class="userprofile-div">
         <div id="userNBeneficiariesCol" class="centerme">
           <div id="userDiv">
@@ -149,10 +169,15 @@ function UserPage(){
             <h3>John Doe</h3>
             <h6>@JDoe1964</h6>
           </div>
-          <div id="beneficiariesDiv">
-            <h4>Beneficiaries (0)</h4>
+
+          <div id="dropdown" class="bene-div">
+            <button id="dropbtn">Beneficiaries (0)</button>
+            <div id="dropdown-content">
+              <a href="#">None Available</a>
+            </div>
           </div>
         </div>
+
         <div id="uploadDatanRecentActivityCol">
           <div id="uploadBtns">
             <Link to="/user-page/uploadDigital">
@@ -164,6 +189,32 @@ function UserPage(){
           </div>
           <div id="recentActivity">
             <h3 class="centerme">Recent Activity</h3>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  )
+}
+
+function DuncanIdahoPage(){
+  return(
+    <div>
+      <div class="userprofile-div">
+
+        <div id="userNBeneficiariesCol" class="centerme">
+          <div id="userDiv">
+            <img class="profile-pic" src="../profilepic.png"></img>
+            <h3>Duncan Idaho</h3>
+            <h6>@secondlife01</h6>
+          </div>
+        </div>
+
+        <div id="uploadDatanRecentActivityCol">
+          <div id="uploadBtns">
+            <Link to="/user-page/u01">
+              <button> Add as beneficiary</button>
+            </Link>
           </div>
         </div>
       </div>
@@ -245,21 +296,3 @@ function UploadDigital(){
   );
 }
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <nav id="navbar">
-//         <a href="#">LifeDataVault</a> 
-//         <a href="#">Data</a> 
-//         <a href="#">Plans</a> 
-//         <a href="#">Explore</a> 
-//         <a href="#">Contact</a>
-//       </nav>
-
-//       <h2 class="centerme blue-text">Life Data Vault</h2>
-//       <p class="centerme grey-text">Leave your data for the ones you love the most</p>
-//       <button>Get Started</button>
-//       <button>Learn More</button>
-//     </div>
-//   );
-// }
