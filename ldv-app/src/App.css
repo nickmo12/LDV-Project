@@ -111,7 +111,7 @@ button{
 #interestedText {
   color: #505050;
   margin: 43px;
-
+}
 /* User Page */
 .profile-pic{
   width: 30%;
@@ -123,4 +123,48 @@ button{
 	flex-wrap: nowrap;
 	justify-content: space-around;
 	align-items: center;
+}
+
+/* Upload Digital */
+#uploadDigitalCol{
+  float:left;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding-left: 70px;
+  align-items: flex-start;
+  color: blue;
+  font-weight: bolder;
+  font-size: larger;
+  
+}
+
+#submitCol{
+  float: right;
+  display: flex;
+  justify-content: flex-start;
+  padding-right: 500px;
+}
+#registerbutton{
+  background-color: #8506f9;
+  color: #FFF;
+  font-weight: bold;
+  font-size: large;
+  border-radius: 10px;
+  width: 140px;
+  height: 50px;
+  position:relative;
+}
+
+/* Upload Physical */
+#uploadPhysicalCol{
+  float:left;
+  display:flex;
+  flex-direction: column;
+  padding-left: 70px;
+  align-items: flex-start;
+  color: blue;
+  font-weight: bolder;
+  font-size: larger;
+  
 }
