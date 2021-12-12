@@ -127,9 +127,21 @@ button{
   padding-bottom: 0;
 }
 
-.searchbar{
+.searchbar {
   padding: .75rem;
   width: 50vw;
+}
+
+.search-btn {
+  margin-left: 1rem;
+  background-color: #8306F8;
+  color: white;
+  font-size: 0.8rem;
+  border: none;
+}
+
+.search-btn:hover {
+  background-color: gray;
 }
 
 .profile-pic{
