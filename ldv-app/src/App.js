@@ -138,6 +138,9 @@ function Login(){
 function UserPage(){
   return(
     <div>
+      <div id="searchbar-div" class="centerme">
+          <input class="searchbar" type="text" list="li" placeholder="Search for beneficiaries"/>
+      </div>
       <div class="userprofile-div">
         <div id="userNBeneficiariesCol" class="centerme">
           <div id="userDiv">
@@ -145,10 +148,15 @@ function UserPage(){
             <h3>John Doe</h3>
             <h6>@JDoe1964</h6>
           </div>
-          <div id="beneficiariesDiv">
-            <h4>Beneficiaries (0)</h4>
+
+          <div id="dropdown" class="bene-div">
+            <button id="dropbtn">Beneficiaries (0)</button>
+            <div id="dropdown-content">
+              <a href="#">None Available</a>
+            </div>
           </div>
         </div>
+
         <div id="uploadDatanRecentActivityCol">
           <div id="uploadBtns">
             <Link to="/user-page/uploadDigital">
@@ -160,6 +168,32 @@ function UserPage(){
           </div>
           <div id="recentActivity">
             <h3 class="centerme">Recent Activity</h3>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  )
+}
+
+function DuncanIdahoPage(){
+  return(
+    <div>
+      <div class="userprofile-div">
+
+        <div id="userNBeneficiariesCol" class="centerme">
+          <div id="userDiv">
+            <img class="profile-pic" src="profilepic.png"></img>
+            <h3>Duncan Idaho</h3>
+            <h6>@secondlife01</h6>
+          </div>
+        </div>
+
+        <div id="uploadDatanRecentActivityCol">
+          <div id="uploadBtns">
+            <Link to="/user-page/u01">
+              <button> Add as beneficiary</button>
+            </Link>
           </div>
         </div>
       </div>
