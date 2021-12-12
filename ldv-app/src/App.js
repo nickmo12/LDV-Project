@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import React, { Component } from "react";import {
+import Photo from './LifeVaultCoverImage.jpeg';
+import React, { Component } from "react";
+import {
   BrowserRouter as Router,
   Routes,
   Route,
@@ -173,11 +175,15 @@ function UserPage(){
 function Explore(){
   return(
     <div>
-      <p>
+      <img src={Photo} alt='Life Vault Cover Photo' class='ExploreImage'/>
+      <p class='paragraphOne'>
       Death is as somber as it is inevitable. But as we live more of our lives online, it's more important than ever to make sure loved ones can access digital accounts when we're gone. Don't be the guy who locked cryptocurrency exchange customers out of $250 million after his death because only he knew the password.
       </p>
-      <p>
+      <p class='paragraphTwo'>
       There are many ways loved ones can request access to your accounts once you're gone, but they don't need that stress. Several online services allow you to designate legacy contacts or grant access after a period of inactivity. Here's how to make sure those you leave behind can manage your affairs after you head to the great beyond.
+      </p>
+      <p class='credit'>
+        LDV was a project developed by Andrew Ohakam, Alberto Garcia, Nicolas Medina, Ahsanul Haque, Imdad Ahmed and Joel Rosas.
       </p>
     </div>
   );
