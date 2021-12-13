@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Photo from './LifeVaultCoverImage.jpeg';
+import Photo from './LifeVaultCoverImage.png';
 import React, { Component } from "react";
 import {
   BrowserRouter as Router,
@@ -9,20 +9,6 @@ import {
   Link
 } from "react-router-dom";
 
-class MyFunc extends Component{
-  constructor(props){
-    super(props);
-    this.Username = "this is a test";
-    this.password = "this is a password";
-  }
-  returnUsername = () => {
-    return {};
-  }
-  
-  changeUsername = (temp) => {
-    this.Username = temp;
-  }
-}
 export default function App(){
   return(
     <Router>
@@ -56,15 +42,12 @@ export default function App(){
         <Route exact path="/search-results/duncan-idaho" element={<DuncanIdahoPage/>} />
         <Route exact path="/user-page/uploadDigital" element={<UploadDigital/>} />
         <Route exact path="/user-page/uploadPhysical" element={<UploadPhysical/>} />
-
-
       </Routes>
     </Router>
   );
 }
 
 function Home(){
-  console.log(MyFunc.testVariable);
   return(
     <div>
       <h2 class="centerme blue-text centerHomePageTitle">Life Data Vault</h2>
@@ -245,21 +228,21 @@ function UploadPhysical(){
     <div>
         <h2 class="centerme pageTitle">Register Physical Device</h2>
         <div id="uploadPhysicalCol" class="centerme">
-            <label for="devicename">Device Name</label><br/>
-            <input type="text" id="devicename" name="devicenameinput" size="60" height="60px"placeholder="Official name of the device (ex: Samsung Galaxy S10, iPhone 8)"></input><br/><br/>
-            <label for="devicetype">Type of Device</label><br/>
+            <label for="devicename" >Device Name</label><br/>
+            <input type="text" class="registerinput" id="devicename" name="devicenameinput" size="60" height="60px"placeholder="Official name of the device (ex: Samsung Galaxy S10, iPhone 8)"></input><br/><br/>
+            <label for="devicetype" class="registerlabel">Type of Device</label><br/>
             <select name="devices" id="devices">
-                <option value="Computer">Computer</option>
+                <option value="Computer">Computer (Desktop/Laptop)</option>
                 <option value="Tablet">Tablet</option>
                 <option value="Phone">Phone</option>
-                <option value="Harddrive">Hard Drive</option>
+                <option value="Harddrive">Hard Disk Drive (HDD)</option>
               </select><br/><br/>
-            <label for="password">Password (optional)</label><br/>
-            <input type="password" id="password" name="password" size="60" placeholder="If a password is needed to access the device, enter it here."></input><br/><br></br>
-            <label for="accountemail">Email connected to account</label><br/>
-            <input type="text" id="accountemail" name="accountemailinput" size="60" placeholder="What is your username for the above website?"></input><br/><br/>
-            <label for="peripherals">Required Peripherals</label><br/>
-            <input type="text" id="peripherals" name="peripheralinput" size="60" placeholder="Ex: chargers, power cords"></input><br/><br/>
+            <label for="password" class="registerlabel">Password (optional)</label><br/>
+            <input type="password" class="registerinput" id="password" name="password" size="60" placeholder="If a password is needed to access the device, enter it here."></input><br/><br></br>
+            <label for="accountemail" class="registerlabel">Email connected to account</label><br/>
+            <input type="text" class="registerinput"  id="accountemail" name="accountemailinput" size="60" placeholder="What is your username for the above website?"></input><br/><br/>
+            <label for="peripherals" class="registerlabel">Required Peripherals</label><br/>
+            <input type="text" id="peripherals" class="registerinput"  name="peripheralinput" size="60" placeholder="Ex: chargers, power cords"></input><br/><br/>
          </div>
          <div id="submitCol">
                   <Link to="/user-page">
@@ -275,17 +258,20 @@ function UploadDigital(){
     <div>
         <h2 class="centerme pageTitle">Register/Update Website Info</h2>
             <div id="uploadDigitalCol" class="centerme">
-                <label for="websitelink">Website Link</label><br/>
-                <input type="text" id="websitelink" name="websitelinkinput" size="60" placeholder="ex: facebook.com, twitter.com" required></input><br/><br/>
-                <label for="username">Username</label><br/>
-                <input type="text" id="username" name="usernameinput" size="60" placeholder="What is your username for the above website?" required></input><br/><br/>
-                <label for="password">Password</label><br/>
-                <input type="password" id="password" name="password" size="60" placeholder="What is your password for the above website?" required></input><br/><br></br>
-                <label for="accountemail">Email connected to account</label><br/>
-                <input type="text" id="accountemail" name="accountemailinput" size="60" placeholder="What email is connected to the above website?"></input><br/><br/>
-                <label for="securityquestions">Security Questions (optional)</label><br/>
+                <label for="websitelink" class="registerlabel">Website Link</label><br/>
+                <input type="text" class="registerinput"  id="websitelink" name="websitelinkinput" size="60" placeholder="ex: facebook.com, twitter.com" required></input>
+
+                <br/><br/>
+                
+                <label for="username" class="registerlabel">Username</label><br/>
+                <input type="text" class="registerinput"  id="username" name="usernameinput" size="60" placeholder="What is your username for the above website?" required></input><br/><br/>
+                <label for="password" class="registerlabel">Password</label><br/>
+                <input type="password" class="registerinput" id="password" name="password" size="60" placeholder="What is your password for the above website?" required></input><br/><br></br>
+                <label for="accountemail" class="registerlabel">Email connected to account</label><br/>
+                <input type="text" class="registerinput" id="accountemail" name="accountemailinput" size="60" placeholder="What email is connected to the above website?"></input><br/><br/>
+                <label for="securityquestions" class="registerlabel">Security Questions (optional)</label><br/>
                 <input type="text" id="securityquestions" name="securityquestioninput" placeholder="Security Question"></input>
-                <input type="text" id="securityanswer" name="securityanswerinput" placeholder="Your answer"></input><br/><br/>
+                <input type="text" class="registerinput" id="securityanswer" name="securityanswerinput" placeholder="Your answer"></input><br/><br/>
               </div>
             <div id="submitCol">
                   <Link to="/user-page">

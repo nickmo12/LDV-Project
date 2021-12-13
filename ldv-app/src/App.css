@@ -114,6 +114,7 @@ button{
 }
 
 /* ----- Plans Page ------ */
+
 .pageTitle {
   color: #575DF4;
   font-size: 30px;
@@ -137,6 +138,7 @@ button{
   color: #505050;
   margin: 43px;
 }
+
 /* User Page */
 
 #userNBeneficiariesCol{
@@ -250,6 +252,7 @@ button{
   justify-content: flex-start;
   padding-right: 500px;
 }
+
 #registerbutton{
   background-color: #8506f9;
   color: #FFF;
@@ -259,6 +262,14 @@ button{
   width: 140px;
   height: 50px;
   position:relative;
+  left: 200%;
+}
+
+@media (min-width: 500px){
+  #registerbutton{
+    left: 150%;
+    top: 400%;
+  }
 }
 
 /* Upload Physical */
@@ -271,4 +282,14 @@ button{
   color: blue;
   font-weight: bolder;
   font-size: larger;  
+}
+
+.registerinput{
+  padding: .65rem;
+  border-radius: 4px;
+}
+
+.registerlabel{
+  margin-top: 1rem;
+  margin-bottom: .25rem;
 }
