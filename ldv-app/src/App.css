@@ -1,3 +1,31 @@
+/* General */
+
+body {
+  font-family: 'Open Sans';
+}
+
+.grey-text{
+  color: #505050;
+}
+
+.blue-text{
+  color: #575DF4;
+}
+
+.ital {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.lg-p-font{
+  font-size: 2rem;
+}
+
+/* Navbar */
+
 #navbar{
   background-color: #3AA2FB;
   padding: 1rem;
@@ -232,6 +260,15 @@ button{
 #dropdown:hover #dropbtn {
   background-color: #2699FB;
 }
+
+#recentActivity{
+  margin-top: 1rem;
+  background-color: white;
+  border: 1px solid rgba(212, 212, 212, 0.705);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 /* Upload Digital */
 #uploadDigitalCol{
   float:left;
